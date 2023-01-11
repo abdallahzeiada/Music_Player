@@ -1,0 +1,107 @@
+.side-bar {
+  // background-color: $main_back;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  @extend %grad;
+  top: -1500px;
+  left: 0;
+  right: 0;
+  transition: all 0.2s;
+  .container {
+    position: relative;
+    padding: 0;
+    .head {
+      position: sticky;
+      background-image: url("");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 100;
+      @extend %flex;
+      padding: 50px 0 200px 0;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      span {
+        position: absolute;
+        left: 5%;
+        color: $main_text;
+        @extend %grad;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $sub_back;
+        @extend %flex;
+      }
+      p {
+        color: $main_text;
+        @extend %comic;
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+      }
+    }
+    ul {
+      list-style: none;
+      // border: 2px solid red;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        .img {
+          margin-right: 20px;
+          width: 20%;
+          img {
+            border-radius: 10px;
+            width: 100%;
+          }
+        }
+        .song-info {
+          width: 60%;
+          h2,
+          p {
+            color: $main_text;
+            @extend %comic;
+            letter-spacing: 1px;
+          }
+          h2 {
+            font-size: 1.2em;
+          }
+          p {
+            font-weight: bold;
+            opacity: 0.5;
+            margin-top: 5px;
+          }
+        }
+        span {
+          color: $main_text;
+          font-size: 0.75em;
+          opacity: 0.5;
+          font-weight: bold;
+          .playing {
+            font-size: 2.5em;
+            opacity: 1;
+          }
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

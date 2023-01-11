@@ -1,0 +1,163 @@
+.side-bar {
+  box-shadow: -3px 0 10px rgba(0, 0, 0,.3);
+  width: 400px;
+  transition: all 0.2s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background-color: $main_back;
+  .container {
+    position: relative;
+    .head {
+      padding: 40px 0;
+      position: sticky;
+      left: 0;
+      right: 0;
+      top: 0;
+      @extend %flex;
+      background-color: $main_back;
+      z-index: 100;
+      span {
+        display: none;
+      }
+      p {
+        color: $main_text;
+        @extend %comic;
+        font-size: 1.3em;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+      }
+    }
+    ul {
+      list-style: none;
+      // border: 2px solid red;
+      li {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5px;
+        border-radius: 15px;
+        .img {
+          margin-right: 20px;
+          width: 20%;
+          img {
+            border-radius: 10px;
+            width: 100%;
+          }
+        }
+        .song-info {
+          width: 60%;
+          h2,
+          p {
+            color: $main_text;
+            @extend %comic;
+            letter-spacing: 1px;
+          }
+          h2 {
+            font-size: 1em;
+          }
+          p {
+            font-weight: bold;
+            opacity: 0.5;
+            margin-top: 5px;
+            font-size: .7em;
+          }
+        }
+        span {
+          color: $main_text;
+          font-size: 0.6em;
+          opacity: 0.5;
+          font-weight: bold;
+        }
+        &:hover {
+          background-color: $sub_back;
+        }
+      }
+      hr {
+        border: none;
+        width: 85%;
+        height: 1px;
+        opacity: 0.5;
+        border-radius: 50px;
+        background-color: $sub_back;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+.fav-bar{
+  // border: 2px solid red;
+  width: 400px;
+  box-shadow: -5px 0 5px rgba(0, 0, 0,.3);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  .head{
+    padding: 40px 0;
+    p{
+      color: $main_text;
+      @extend %flex;
+    }
+  }
+  ul{
+    // border: 2px solid blue;
+    li {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 5px;
+      border-radius: 15px;
+      .img {
+        margin-right: 20px;
+        width: 20%;
+        img {
+          border-radius: 10px;
+          width: 100%;
+        }
+      }
+      .song-info {
+        width: 60%;
+        h2,
+        p {
+          color: $main_text;
+          @extend %comic;
+          letter-spacing: 1px;
+        }
+        h2 {
+          font-size: 1em;
+        }
+        p {
+          font-weight: bold;
+          opacity: 0.5;
+          margin-top: 5px;
+          font-size: .7em;
+        }
+      }
+      span {
+        color: $main_text;
+        font-size: 0.6em;
+        opacity: 0.5;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: $sub_back;
+      }
+      
+    }
+    hr {
+      border: none;
+      width: 85%;
+      height: 1px;
+      opacity: 0.5;
+      border-radius: 50px;
+      background-color: $sub_back;
+      margin: 10px auto;
+    }
+  }
+}

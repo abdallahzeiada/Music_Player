@@ -1,0 +1,42 @@
+main {
+  //   border: 2px solid red;
+  position: fixed;
+  height: 40%;
+  left: 0;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  .container {
+    @extend %flex;
+    .song-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-image: url("/assets/imgs/img0.jpg");
+      background-position: center;
+      background-size: cover;
+      animation: rotate 10s infinite linear;
+      animation-play-state: paused;
+    }
+    .song-img-rotate {
+      animation-play-state: running;
+      box-shadow: 0 0 10px 10px $gradiant1;
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes shadow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 100px 10px $gradiant1;
+  }
+}

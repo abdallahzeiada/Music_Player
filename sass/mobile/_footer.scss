@@ -1,0 +1,111 @@
+footer {
+  // border: 2px solid red;
+  position: fixed;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  height: 35%;
+  .container {
+    .song-box {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .song-details {
+        h1,
+        p {
+          color: $main_text;
+          letter-spacing: 1px;
+          @extend %comic;
+        }
+        p {
+          font-weight: bold;
+          font-size: 0.9em;
+          opacity: 0.5;
+          margin-top: 5px;
+        }
+      }
+      .song-actions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span {
+          color: $main_text;
+          opacity: 0.5;
+          // border: 1px solid red;
+          width: 40px;
+          height: 40px;
+          @extend %flex;
+          font-size: 1.7em;
+          &:nth-child(2) {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+    .player {
+      .slider {
+        input {
+          appearance: none;
+          width: 100%;
+          height: 6px;
+          background-color: $sub_back;
+          border-radius: 50px;
+          overflow: hidden;
+          &::-webkit-slider-thumb {
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            @extend %grad;
+            box-shadow: -400px 0 0 400px $gradiant1;
+          }
+        }
+        .time {
+          margin-top: 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            color: $main_text;
+            opacity: 0.5;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+      .controls {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        span {
+          color: $main_text;
+          @extend %flex;
+        }
+        .play,
+        .pause {
+          padding: 20px;
+          width: 60px;
+          height: 60px;
+          background-color: $sub_back;
+          border-radius: 50%;
+          font-size: 3em;
+          @extend %shadow;
+        }
+        .play-shadow {
+          @extend %grad;
+          box-shadow: 0 0 5px 5px $gradiant2, 0 0 10px 10px $gradiant1;
+        }
+        .prev,
+        .next {
+          font-size: 2.3em;
+        }
+        .shuffle,
+        .playlist {
+          opacity: 0.5;
+          font-size: 1.7em;
+        }
+      }
+    }
+  }
+}
